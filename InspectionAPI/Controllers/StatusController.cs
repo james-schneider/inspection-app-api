@@ -33,7 +33,7 @@ namespace InspectionAPI.Controllers
         public async Task<ActionResult<Status>> GetStatus(int id)
         {
             var status = await _context.Statuses.FindAsync(id);
-
+            Console.log("Just a check")
             if (status == null)
             {
                 return NotFound();
